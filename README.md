@@ -2,66 +2,65 @@
 
 The overal goal of this application is to create a Forum where people can post messages, quotes, etc, allowing others to comment on them.
 
-I did not use [Test Driven Develoment (TDD)](https://en.wikipedia.org/wiki/Test-driven_development) and/or [Behavior Driven Development (BDD)](https://en.wikipedia.org/wiki/Behavior-driven_development)
 I have designed other applications that use such design methodologies. You can view them here on my GitHub repos.
 
 This app is [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) with excellent routed actions.
 
-I didn't dwell a lot on the super-responsiveness of the app as I was concerned with the [Backend](https://www.upwork.com/hiring/development/back-end-web-developer/) development. When chanced 
-I'll refine the nitty gritty and create some amazing feel. Programming 
-late at night can have it's downsides, but no sooner do I get some spare time, than I will enhance lots of it's [Frontend](https://www.upwork.com/hiring/development/front-end-developer/) functionalities. 
+I didn't dwell a lot on the super-responsiveness of the app as I was concerned with the [Backend](https://www.upwork.com/hiring/development/back-end-web-developer/) development. When chanced I'll refine the nitty gritty and create some amazing feel. 
 
-## Functional Requirements
+Programming late at night can have it's downsides, but no sooner do I get some spare time, than I will enhance lots of it's [Frontend](https://www.upwork.com/hiring/development/front-end-developer/) functionalities. 
 
-### 1. Browser duh!
-I use Chrome and my favorite text editor is Sublime. Most text editors like Text Wrangler, Atom, Brackets and Notepad++ can open the project with an excellent navigation to view source code and folders.
+# The Software Development Cycle in a Nutshell. 
+
+I wont go in details of every procedure I undertook to develop this app, but will nevertheless mention the main [gems](https://rubygems.org/) that I used to enhance the functionalities of this Website App. 
+
+I didn't use TDD, a precursor of [Behavior Driven Development (BDD)](https://en.wikipedia.org/wiki/Behavior-driven_development) whilst developing this application. It's functionality is incredible, it's user friendly but it's worth mentioning that I didn't write any tests for the spirit of transparency.
+
+
+## 1. Chrome Browser and Developer Tools.
+
+Whilst coding, I used Chrome Browser and it's Developer Tools to View. Chrome bonds well with my local server and updates Automatically whenever I make changes within my [Models, Views or Controllers](https://www.tutorialspoint.com/ruby-on-rails/rails-framework.htm).  
+
+I have various Chrome add-ons that enhance my productivity as a Software Developer and there is a [bundle](https://chrome.google.com/webstore/search/developer%20pack) that can be downloaded and installed from Chrome Web Store. 
+
+
+## 2. CMD Prompt / Terminal / Bash
+
+I used a [UNIX](https://en.wikipedia.org/wiki/Unix) machine for the development. An iMac to be precise running the following basic specs. 
 
 ```ruby
-# Chrome works well and would reccomend it for wanna be Rubyists or Rails
-# developers due to it's rich developer tools. 
+# OSX El-Capitan.
 
+# Puma Webserver (Installs with Rails App).
 
-#=> Other browsers should do the charm as well, wouldn't reccomend IE 
-#   though </:-)
+# Sublime Text 3
+
+# Browser Sync
+ 
+# I don't use Winblows NT, for coding. :-)
 ```
 
-### 2. CMD Prompt / Terminal / Bash
-
-```ruby
-# I didn't deploy my app to Heroku because all my accounts are fully
-# loaded with apps and thus have to pay for a deployment.
 
 
-# If on a UNIX machine (Linux or Mac), chances are that you have Ruby 
-# installed. Clone the folder or download it on your machine.
-# CD to the folder and run the server. (I developed with Puma but 
-# Webrick will still do.) Open localhost port 3000 et voila!
 
-# If Running [Winblows](https://en.wikipedia.org/wiki/Microsoft_Windows), you'll need to install Ruby cos Microsoft thinks 
-# you should stick to Visual Studio Tools.
-```
+# Technical Requirements
 
-## Technical Requirements
 
-### 1. Ruby and Rails. 
+## 1. Ruby and Rails. 
 
 ```ruby
 # My Ruby version; 
 ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]
 # My Rails version;
 Rails 5.0.0.1
+
 # I use Version Control. Prefer Git than Subversion. 
 git version 2.6.4
-# Stuff you'll get out of the box are SQLite, most gems and their 
-# dependencies for a basic system functionality. 
-$ mkdir <your Dir>
-$ CD <your Dir>
-$ rails new <name of app>
-$ rails s 
-# Development platform created. :-)
+
 ```
 
-### 2. Simple form
+
+## 2. Simple form
 
 Saved me a lot of time. 
 Used Gemfile
@@ -91,7 +90,8 @@ Then got to normal Rails coding like the form below.
 <% end %>
 ```
 
-### 3. Bootsrap-sass
+
+## 3. Bootsrap-sass
 
 [![Gem Version](https://badge.fury.io/rb/bootstrap-sass.svg)](http://badge.fury.io/rb/bootstrap-sass)
 [![npm version](https://img.shields.io/npm/v/bootstrap-sass.svg?style=flat)](https://www.npmjs.com/package/bootstrap-sass)
@@ -108,7 +108,8 @@ gem 'sass-rails', '>= 3.2'
 @import "bootstrap";
 ```
 
-### 4. Devise
+
+## 4. Devise
 
 [![Build Status](https://api.travis-ci.org/plataformatec/devise.svg?branch=master)](http://travis-ci.org/plataformatec/devise)
 [![Code Climate](https://codeclimate.com/github/plataformatec/devise.svg)](https://codeclimate.com/github/plataformatec/devise)
@@ -134,11 +135,11 @@ $ rails generate devise:install
 Devise interacts well with rails and creates nested routes automatically. No need to update them. 
 
 
-### 5. Database creation
+## 5. Database creation
 
 I used SQLite for development. Will use PostgreSQL if I decide to deploy to Heroku.
 
-### 6. Deployment instructions
+## 6. Deployment instructions
 
 Deployment is straight forward in Ubuntu & Capistrano, Passenger, Git & Capistrano, Heroku, etc.
 ```ruby
